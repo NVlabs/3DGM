@@ -1,6 +1,6 @@
 <div align="center">   
   
-# 3D Gaussian Mapping (3DGM): Simultaneous 2D Segmentation and 3D Mapping with Self-Supervision
+# 3D Gaussian Mapping: Simultaneous 2D Segmentation and 3D Mapping with Self-Supervision
 </div>
 
 
@@ -12,6 +12,7 @@
 
 >  [[PDF]](https://arxiv.org/pdf/2405.17187) [[Project]](https://3d-gaussian-mapping.github.io/) 
 
+> Emerged 2D segmentation from nine traversals of the same location, collected on different dates: 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, and 12-16-2021.
 <table>
   <tr>
     <td><img src="teaser/loc600/1119.gif" alt="Video 1119" width="100%"></td>
@@ -29,10 +30,6 @@
     <td><img src="teaser/loc600/1216.gif" alt="Video 1216" width="100%"></td>
   </tr>
 </table>
-
-<p style="color: #0095b6; text-align: center; margin-top: 1cm; margin-bottom: 1cm;">
-  Emerged 2D Segmentation from 9 traversals.
-</p>
 
 
 # News
@@ -58,9 +55,9 @@ Mapverse features 40 locations, each with no less than 10 traversals, totaling 4
 
 | ![space-1.jpg](teaser/ithaca.png) | 
 |:--:| 
-| ***Mapverse-Ithaca365.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
+| ***Selected Image Frames of Mapverse-Ithaca365.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
 | ![space-1.jpg](teaser/nuplan.png) | 
-| ***Mapverse-nuPlan.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
+| ***Selected Image Frames of Mapverse-nuPlan.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
 
 # Bibtex
 If this work is helpful for your research, please cite the following BibTeX entry.
