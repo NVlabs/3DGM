@@ -31,7 +31,7 @@
 </table>
 
 <p style="color: #0095b6; text-align: center; margin-top: 1cm; margin-bottom: 1cm;">
-  9 traversals (left to right, top to bottom): 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, and 12-16-2021
+  Emerged 2D Segmentation from 9 traversals.
 </p>
 
 
@@ -58,11 +58,9 @@ Mapverse features 40 locations, each with no less than 10 traversals, totaling 4
 
 | ![space-1.jpg](teaser/ithaca.png) | 
 |:--:| 
-| ***Mapverse-Ithaca365*** |
-|:--:| 
+| ***Mapverse-Ithaca365.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
 | ![space-1.jpg](teaser/nuplan.png) | 
-|:--:| 
-| ***Mapverse-nuPlan*** |
+| ***Mapverse-nuPlan.** Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity.* |
 
 # Bibtex
 If this work is helpful for your research, please cite the following BibTeX entry.
