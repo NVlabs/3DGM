@@ -3,7 +3,7 @@
 # 3D Gaussian Mapping (3DGM): Simultaneous 2D Segmentation and 3D Mapping with Self-Supervision
 </div>
 
-![](./teaser/scene08_13_19.gif "")
+![](./teaser/ithaca-loc600.gif "")
 
 > **Memorize What Matters: Emergent Scene Decomposition from Multitraverse**, Technical Report.
 
