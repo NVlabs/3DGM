@@ -12,40 +12,68 @@
 
 >  [[PDF]](https://arxiv.org/pdf/2405.17187) [[Project]](https://3d-gaussian-mapping.github.io/) 
 
-<h3 style="color: #0095b6; font-weight: bold;">Location 600</h3>
-<figure class="col-2">
-  <img src="teaser/loc600/1119.gif" width="100%" alt="Video 1119">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1122.gif" width="100%" alt="Video 1122">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1130.gif" width="100%" alt="Video 1130">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1201.gif" width="100%" alt="Video 1201">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1206.gif" width="100%" alt="Video 1206">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1207.gif" width="100%" alt="Video 1207">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1214.gif" width="100%" alt="Video 1214">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1215.gif" width="100%" alt="Video 1215">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/1216.gif" width="100%" alt="Video 1216">
-</figure>
-<figure class="col-2">
-  <img src="teaser/loc600/0116.gif" width="100%" alt="Video 0116">
-</figure>
-<p class="caption" style="color: #0095b6; margin-top: 1cm; margin-bottom: 1cm;">
-  10 traversals (left to right, top to bottom): 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, 12-16-2021, and 01-16-2022
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        .grid-item {
+            width: 100%;
+        }
+        .caption {
+            color: #0095b6;
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+            text-align: center;
+        }
+    </style>
+    <title>Location 600</title>
+</head>
+<body>
+    <h3 style="color: #0095b6; font-weight: bold; text-align: center;">Location 600</h3>
+    <div class="grid-container">
+        <figure class="grid-item">
+            <img src="teaser/loc600/1119.gif" alt="Video 1119">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1122.gif" alt="Video 1122">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1130.gif" alt="Video 1130">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1201.gif" alt="Video 1201">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1206.gif" alt="Video 1206">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1207.gif" alt="Video 1207">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1214.gif" alt="Video 1214">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1215.gif" alt="Video 1215">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/1216.gif" alt="Video 1216">
+        </figure>
+        <figure class="grid-item">
+            <img src="teaser/loc600/0116.gif" alt="Video 0116">
+        </figure>
+    </div>
+    <p class="caption">
+        10 traversals (left to right, top to bottom): 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, 12-16-2021, and 01-16-2022
+    </p>
+</body>
+</html>
 
 
 
