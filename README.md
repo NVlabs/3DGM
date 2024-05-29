@@ -12,68 +12,42 @@
 
 >  [[PDF]](https://arxiv.org/pdf/2405.17187) [[Project]](https://3d-gaussian-mapping.github.io/) 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-        }
-        .grid-item {
-            width: 100%;
-        }
-        .caption {
-            color: #0095b6;
-            margin-top: 1cm;
-            margin-bottom: 1cm;
-            text-align: center;
-        }
-    </style>
-    <title>Location 600</title>
-</head>
-<body>
-    <h3 style="color: #0095b6; font-weight: bold; text-align: center;">Location 600</h3>
-    <div class="grid-container">
-        <figure class="grid-item">
-            <img src="teaser/loc600/1119.gif" alt="Video 1119">
+<h3 style="color: #0095b6; font-weight: bold; text-align: center;">Location 600</h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1119.gif" alt="Video 1119" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1122.gif" alt="Video 1122">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1122.gif" alt="Video 1122" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1130.gif" alt="Video 1130">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1130.gif" alt="Video 1130" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1201.gif" alt="Video 1201">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1201.gif" alt="Video 1201" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1206.gif" alt="Video 1206">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1206.gif" alt="Video 1206" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1207.gif" alt="Video 1207">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1207.gif" alt="Video 1207" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1214.gif" alt="Video 1214">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1214.gif" alt="Video 1214" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1215.gif" alt="Video 1215">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1215.gif" alt="Video 1215" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/1216.gif" alt="Video 1216">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/1216.gif" alt="Video 1216" style="width: 100%; height: auto;">
         </figure>
-        <figure class="grid-item">
-            <img src="teaser/loc600/0116.gif" alt="Video 0116">
+        <figure style="width: 18%; margin: 0;">
+            <img src="teaser/loc600/0116.gif" alt="Video 0116" style="width: 100%; height: auto;">
         </figure>
     </div>
-    <p class="caption">
+    <p style="color: #0095b6; margin-top: 1cm; margin-bottom: 1cm; text-align: center;">
         10 traversals (left to right, top to bottom): 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, 12-16-2021, and 01-16-2022
     </p>
-</body>
-</html>
 
 
 
