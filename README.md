@@ -1,6 +1,6 @@
 <div align="center">   
   
-# 3D Gaussian Mapping (3DGM): Simultaneous 2D Object Segmentation and 3D Environment Mapping with Self-Supervision
+# 3D Gaussian Mapping (3DGM): Simultaneous 2D Segmentation and 3D Mapping with Self-Supervision
 </div>
 
 ![](./teaser/scene08_13_19.gif "")
