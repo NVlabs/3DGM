@@ -12,7 +12,10 @@
 
 >  [[PDF]](https://arxiv.org/pdf/2405.17187) [[Project]](https://3d-gaussian-mapping.github.io/) 
 
-<img src="./teaser/ithaca-loc600.gif" alt="" width="700">
+<div style="text-align: center;">
+  <img src="./teaser/ithaca-loc600.gif" alt="" width="600" style="border: 2px solid black;">
+</div>
+
 
 # News
 - [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). We will release our data and code soon!
