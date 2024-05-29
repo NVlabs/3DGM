@@ -1,9 +1,4 @@
-<div align="center">   
-  
 # 3D Gaussian Mapping: Simultaneous 2D Segmentation and 3D Mapping with Self-Supervision
-</div>
-
-
 
 
 > **Memorize What Matters: Emergent Scene Decomposition from Multitraverse**, Technical Report.
@@ -34,7 +29,6 @@
 
 # News
 - [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). We will release our data and code soon!
-</br>
 
 
 # Abstract
