@@ -48,9 +48,9 @@ Humans naturally retain memories of permanent elements, while ephemeral moments 
 | ***Overall framework of 3DGM**. Given multitraverse RGB videos, 3DGM outputs a Gaussian-based environment map (EnvGS) and 2D ephemerality segmentation (EmerSeg) for the input images. Note that the proposed framework is LiDAR-free and self-supervised.* |
 
 
-# Dataset
+# Mapverse
 
-We build the Mapping and segmentation through multitraverse (Mapverse) benchmark, sourced from the Ithaca365 and nuPlan datasets to evaluate our method in three tasks: unsupervised 2D segmentation, 3D reconstruction, and neural rendering. 
+We build the Mapping and segmentation through multitraverse (Mapverse) benchmark, sourced from the [Ithaca365](https://openaccess.thecvf.com/content/CVPR2022/papers/Diaz-Ruiz_Ithaca365_Dataset_and_Driving_Perception_Under_Repeated_and_Challenging_Weather_CVPR_2022_paper.pdf) and [nuPlan](https://arxiv.org/pdf/2403.04133) datasets to evaluate our method in three tasks: unsupervised 2D segmentation, 3D reconstruction, and neural rendering. 
 Mapverse features 40 locations, each with no less than 10 traversals, totaling 467 driving video clips and 35,304 images. 
 
 | ![space-1.jpg](teaser/ithaca.png) | 
