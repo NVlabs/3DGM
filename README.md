@@ -12,18 +12,26 @@
 
 >  [[PDF]](https://arxiv.org/pdf/2405.17187) [[Project]](https://3d-gaussian-mapping.github.io/) 
 
+<h3 style="color: #0095b6; font-weight: bold; text-align: center;">Location 600</h3>
+
 <table>
   <tr>
     <td><img src="teaser/loc600/1119.gif" alt="Video 1119" width="100%"></td>
     <td><img src="teaser/loc600/1122.gif" alt="Video 1122" width="100%"></td>
-    <td><img src="teaser/loc600/1130.gif" alt="Video 1130" width="100%"></td>
-    <td><img src="teaser/loc600/1201.gif" alt="Video 1201" width="100%"></td>
-    <td><img src="teaser/loc600/1206.gif" alt="Video 1206" width="100%"></td>
   </tr>
   <tr>
+    <td><img src="teaser/loc600/1130.gif" alt="Video 1130" width="100%"></td>
+    <td><img src="teaser/loc600/1201.gif" alt="Video 1201" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="teaser/loc600/1206.gif" alt="Video 1206" width="100%"></td>
     <td><img src="teaser/loc600/1207.gif" alt="Video 1207" width="100%"></td>
+  </tr>
+  <tr>
     <td><img src="teaser/loc600/1214.gif" alt="Video 1214" width="100%"></td>
     <td><img src="teaser/loc600/1215.gif" alt="Video 1215" width="100%"></td>
+  </tr>
+  <tr>
     <td><img src="teaser/loc600/1216.gif" alt="Video 1216" width="100%"></td>
     <td><img src="teaser/loc600/0116.gif" alt="Video 0116" width="100%"></td>
   </tr>
@@ -32,6 +40,7 @@
 <p style="color: #0095b6; text-align: center; margin-top: 1cm; margin-bottom: 1cm;">
   10 traversals (left to right, top to bottom): 11-19-2021, 11-22-2021, 11-30-2021, 12-01-2021, 12-06-2021, 12-07-2021, 12-14-2021, 12-15-2021, 12-16-2021, and 01-16-2022
 </p>
+
 
 # News
 - [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). We will release our data and code soon!
