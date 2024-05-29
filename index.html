@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://research.nvidia.com/labs/toronto-ai/xcube/ -->
+<html><head>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600|Material+Icons&display=swap" rel="stylesheet">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script src="./3dgm_files/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+
+  <style type="text/css">
+    body {
+	font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/* font-family: 'Lato', Verdana, Helvetica, sans-serif; */
+	font-weight: 300;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 980px;
+    }
+    h1 {
+	font-weight:300;
+	line-height: 1.15em;
+    }
+
+    h2 {
+	font-size: 1.75em;
+    }
+    a:link,a:visited {
+	color: #1367a7;
+	text-decoration: none;
+    }
+    a:hover {
+	color: #208799;
+    }
+    h1, h2, h3 {
+	text-align: center;
+    }
+    h1 {
+	font-size: 40px;
+	font-weight: 500;
+    }
+    .rainbow-text {
+	font-size: 40px;
+	background-image: linear-gradient(to right, #009688, #4caf50, #00bcd4 100% );
+	-webkit-background-clip: text;
+	color: transparent;
+    }
+    h2 {
+	font-weight: 400;
+	margin: 16px 0px 4px 0px;
+    }
+    .paper-title {
+	padding: 16px 0px 16px 0px;
+    }
+    section {
+	margin: 32px 0px 32px 0px;
+	text-align: justify;
+	clear: both;
+    }
+    .col-6 {
+	width: 16.6%;
+	float: left;
+    }
+    .col-5 {
+	width: 20%;
+	float: left;
+    }
+    .col-4 {
+	width: 25%;
+	float: left;
+    }
+    .bold-sentence {font-weight: bold;}
+    .col-3 {
+	width: 33%;
+	float: left;
+    }
+    .col-2 {
+	width: 50%;
+	float: left;
+    }
+    .row, .author-row, .affil-row {
+	overflow: auto;
+    }
+    .author-row, .affil-row {
+	font-size: 20px;
+    }
+    .row {
+	margin: 16px 0px 16px 0px;
+    }
+    .authors {
+	font-size: 18px;
+    }
+    .affil-row {
+	margin-top: 16px;
+    }
+    .teaser {
+	max-width: 100%;
+    }
+    .text-center {
+	text-align: center;  
+    }
+    .text-justify {
+	text-align: justify;  
+    }
+    .screenshot {
+	width: 256px;
+	border: 1px solid #ddd;
+    }
+    .screenshot-el {
+	margin-bottom: 16px;
+    }
+    hr {
+	height: 1px;
+	border: 0; 
+	border-top: 1px solid #ddd;
+	margin: 0;
+    }
+    .material-icons {
+	vertical-align: -6px;
+    }
+    p {
+	line-height: 1.25em;
+    }
+    .caption {
+	font-size: 16px;
+	/*font-style: italic;*/
+	color: rgb(73, 73, 73);
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 12px;
+    }
+    .caption_method {
+	font-size: 16px;
+	/*font-style: italic;*/
+	color: rgb(73, 73, 73);
+	/* text-align: center; */
+	margin-top: 15px;
+	margin-bottom: 12px;
+    }
+    video {
+	display: block;
+	margin: auto;
+    }
+    figure {
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    }
+    #bibtex pre {
+	font-size: 14px;
+	background-color: #eee;
+	padding: 16px;
+    }
+    .blue {
+	color: #2c82c9;
+	font-weight: bold;
+    }
+    .orange {
+	color: #d35400;
+	font-weight: bold;
+    }
+    .flex-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+    }
+    .paper-btn {
+	position: relative;
+	text-align: center;
+
+	display: inline-block;
+	margin: 8px;
+	padding: 8px 8px;
+
+	border-width: 0;
+	outline: none;
+	border-radius: 2px;
+	
+	background-color: #1367a7;
+	color: #ecf0f1 !important;
+	font-size: 20px;
+	width: 100px;
+	font-weight: 600;
+    }
+
+    /* .supp-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 18px;
+  width: 90px;
+  font-weight: 400;
+} */
+    .supp-btn {
+	background-color: #fff;
+	border: 1.5px solid #000;
+	color: #000 !important;
+	font-size: 16px;
+	padding: 12px 24px;
+	border-radius: 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	letter-spacing: 1px;
+	margin: 8px;
+	padding: 8px 8px;
+	width: 150px;
+	font-weight: 400;
+    }
+    .paper-btn-parent {
+	display: flex;
+	justify-content: center;
+	margin: 16px 0px;
+    }
+    .paper-btn:hover {
+	opacity: 0.85;
+    }
+    .container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+    }
+    /* .venue {
+    color: #1367a7;
+} */
+    .venue {
+	/*    color: #1367a7;*/
+	color: #111;
+	font-weight: 400;
+    }
+
+
+    .topnav {
+	overflow: hidden;
+	background-color: #EEEEEE;
+    }
+
+    .topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 16px;
+    }
+    .controls {
+	margin-bottom: 10px;
+	margin-top: 20px;
+    }
+    .left-controls {
+	display: inline-block;
+	vertical-align: top;
+	width: 80%;
+    }
+    .right-controls {
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+	text-align: right;
+    }
+
+    .render_window {
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow: 0px 0px 0px black;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: calc(33% - 20px);
+    }
+    /* From Ref-NeRF */
+    .video-compare-container {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	line-height: 0;
+	overflow: hidden !important;
+    }
+
+    .video {
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+    }
+
+    .videoMerge {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	background-size: cover;
+    }
+
+    .cropped-video {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+    }
+    .large_video {
+	margin: 10px 0 0 0;
+	border: 1px solid #BBB;
+	box-shadow: 0 0 30px #792;
+    }
+  </style>
+
+
+  </head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1168.0" data-gr-ext-installed=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><div class="topnav" id="myTopnav">
+    <a href="https://www.nvidia.com/"><img width="100%" src="./assets/nvidia.svg"></a>
+    <a href="https://alvarezlopezjosem.github.io/"><strong>AV Perception Research</strong></a>
+    <a href="https://research.nvidia.com/labs/avg/"><strong>AVR Group</strong></a>
+    <a href="https://research.nvidia.com/labs/lpr/"><strong>LPR Group</strong></a>
+    <a href="https://nv-tlabs.github.io/"><strong>Toronto AI Lab</strong></a>
+  </div>
+
+  <!-- End : Google Analytics Code -->
+  <script type="text/javascript" src="./3dgm_files/hidebib.js"></script>
+  <link href="./3dgm_files/css" rel="stylesheet" type="text/css">
+  
+    <title>Memorize What Matters: Emergent scene decomposition from multitraverse</title>
+    <meta property="og:description" content="Memorize What Matters: Emergent scene decomposition from multitraverse">
+    <link href="./3dgm_files/css2" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./3dgm_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6HHDEXF452');
+    </script>
+
+  
+    <div class="container">
+      <div class="paper-title">
+	<h1><span class="rainbow-text">Memorize What Matters: </span> Emergent scene decomposition from multitraverse</h1>
+      </div>
+
+      <div id="authors">
+        <div class="author-row">
+          <div class="col-4 text-center"><a href="https://yimingli-page.github.io/">Yiming Li</a><sup>1,2</sup></div>
+          <div class="col-4 text-center"><a href="">Zehong Wang</a><sup>1</sup></div>
+          <div class="col-4 text-center"><a href="https://yuewang.xyz/">Yue Wang</a><sup>2,3</sup></div>
+          <div class="col-4 text-center"><a href="https://chrisding.github.io/">Zhiding Yu</a><sup>2</sup></div>
+          <div class="col-4 text-center"><a href="https://zgojcic.github.io/">Zan Gojcic</a><sup>2</sup></div>
+          <div class="col-4 text-center"><a href="https://web.stanford.edu/~pavone/index.html">Marco Pavone</a><sup>2,4</sup></div>   
+          <div class="col-4 text-center"><a href="https://ai4ce.github.io/">Chen Feng</a><sup>1</sup></div>   
+          <div class="col-4 text-center"><a href="https://alvarezlopezjosem.github.io/">Jose M. Alvarez</a><sup>2</sup></div>            
+        </div>
+
+        <div class="affil-row">
+          <div class="col-4 text-center"><sup>1</sup> NYU</div>
+<div class="col-4 text-center"><sup>2</sup> NVIDIA Research</div>
+<div class="col-4 text-center"><sup>3</sup> USC</div>
+<div class="col-4 text-center"><sup>4</sup> Stanford University</div>
+</div>
+<div class="affil-row">
+  <div class="venue text-center"><b>Technical Report: 3D Gaussian Mapping (3DGM)</b></div>
+</div>
+
+<div style="clear: both">
+  <div class="paper-btn-parent">
+    <a class="supp-btn" href="https://arxiv.org/abs/2405.17187">
+      <span class="material-icons"> folder_open </span> 
+      arXiv
+    </a>
+    <a class="supp-btn" href="https://arxiv.org/pdf/2405.17187">
+      <span class="material-icons"> description </span> 
+      Paper
+    </a>
+    <a class="supp-btn" href="https://github.com/NVlabs/3DGM">
+      <span class="material-icons"> keyboard </span> 
+      Code
+    </a>
+    <a class="supp-btn" href="">
+      <span class="material-icons"> play_circle </span> 
+      Video
+    </a>
+    <!-- <a class="supp-btn" href="assets/poster.pdf">
+         <span class="material-icons"> description </span> 
+         Poster
+    </a> -->
+    <!-- <a class="supp-btn" href="https://research.nvidia.com/labs/toronto-ai/xcube/assets/bib.txt">
+      <span class="material-icons"> description </span> 
+      BibTeX
+    </a> -->
+</div></div>
+</div>
+
+<section id="contribution">
+  <!-- <h2>Core Contributions</h2> -->
+  <h2 style="font-weight: bold;">Core Contributions</h2> <!-- Blue -->
+  <hr>
+  <p>
+    &bull; We propose a <u>camera-only 3D environment mapping</u> framework for self-driving scenes based on 3D Gaussian Splatting. 
+  </p>
+  <p>
+    &bull; We propose a <u>self-supervised 2D ephemerality segmentation</u> method that can be used as <b>autolabeling toolkit</b> for dynamic scenes.
+  </p>
+  <p>
+    &bull; We build the Mapverse benchmark to evaluate <u>multitraverse 2D segmentation, 3D reconstruction, and neural rendering</u>.
+  </p>
+</section>
+
+<section id="teaser">
+  <figure style="width: 100%;">
+    <!-- <a href="assets/web-teaser_x264.mp4">
+         <img width="100%" src="assets/web-teaser_x264.mp4">
+    </a> -->
+    <video id="teaser text-center" muted="" playsinline="" autoplay="" loop="" width="100%">
+      <source src="./assets/teaser.mp4" type="video/mp4">
+    </video>
+    <p class="caption">
+      <code>3DGM</code> unsupervisedly converts multitraverse RGB videos into 3DGS of the environment (<code>EnvGS</code>) and 2D ephemeral object masks (<code>EmerSeg</code>). 
+    </p>
+  </figure>
+</section>
+
+
+<section id="abstract">
+  <!-- <h2>Abstract</h2> -->
+  <h2 style="font-weight: bold;">Abstract</h2>
+  <!-- <h2 style="color: #76B900; font-weight: bold;">Abstract</h2> -->
+  
+  <hr>
+  <p>
+    Humans naturally retain memories of permanent elements, while ephemeral moments often slip through the cracks of memory. 
+    This selective retention is crucial for robotic perception, localization, and mapping. To endow robots with this capability,
+    we introduce <code>3D Gaussian Mapping (3DGM)</code>, a self-supervised, camera-only offline mapping framework grounded in 3D Gaussian Splatting. 
+    <code>3DGM</code> converts multitraverse RGB videos from the same region into a Gaussian-based environmental map while concurrently performing 2D ephemeral object segmentation. 
+    <b>Our key observation is that the environment remains consistent across traversals, while objects frequently change. This allows us to exploit self-supervision from repeated 
+      traversals to achieve environment-object decomposition.</b> More specifically, <code>3DGM</code> formulates multitraverse environmental mapping as a robust differentiable 
+      rendering problem, treating pixels of the environment and objects as inliers and outliers, respectively. Using robust feature distillation, feature residuals mining, 
+      and robust optimization, <code>3DGM</code> jointly performs 3D mapping and 2D segmentation without human intervention. We build the Mapverse benchmark, sourced from the Ithaca365 and nuPlan datasets, 
+      to evaluate our method in unsupervised 2D segmentation, 3D reconstruction, and neural rendering. Extensive results verify the effectiveness and potential of <code>3DGM</code> for self-driving and robotics.
+  </p>
+</section>
+
+
+<section id="takeaways">
+  <!-- <h2>Key Takeaways</h2> -->
+  <h2 style="font-weight: bold;">Key Takeaways</h2> 
+  <!-- <h2 style="color: #76B900; font-weight: bold;">Key Takeaways</h2> -->
+  <hr>
+  <p>
+    <li>Multitraverse consensus-dissensus can be exploited as a self-supervision signal to decompose the environment and objects.</li>
+    <li>Repeated traversals of the same location can provide more camera observations to upgrade the 3D reconstruction without LiDARs.</li>
+    <li>Robust features produced by vision foundation models are crucial for 2D consensus identification of multitraverse.</li>
+  </p>
+</section>
+
+
+
+<section id="method">
+  <!-- <h2>Method</h2> -->
+  <h2 style="font-weight: bold;">Method</h2>
+  <!-- <h2 style="color: #76B900; font-weight: bold;">Method</h2> -->
+  <hr>
+  <figure style="width: 100%;">
+    <a href="https://research.nvidia.com/labs/toronto-ai/xcube/assets/network_architecture.jpeg">
+      <img width="100%" src="./3dgm_files/method.png">
+    </a>
+    <p class="caption_method" style="margin-bottom: 1px;">
+      Given RGB camera observations collected at different times, we use COLMAP to obtain the camera poses and initial Gaussian points. 
+      Then we utilize splatting-based rasterization to render both RGB images and robust features from the environmental Gaussians. 
+      We further leverage feature residuals to extract the object masks by mining spatial information of the residuals. 
+      Finally, we utilize the ephemerality masks to finetune the 3D Gaussians.
+    </p>
+  </figure>
+</section>
+
+
+
+
+<section id="Dataset">
+  <!-- <h2>Dataset</h2> -->
+  <h2 style="font-weight: bold;">Mapverse Dataset</h2>
+  
+  <!-- <h2 style="color: #76B900; font-weight: bold;">Dataset</h2> -->
+  <hr>
+  <p>
+    We build the Mapverse benchmark sourced from the <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Diaz-Ruiz_Ithaca365_Dataset_and_Driving_Perception_Under_Repeated_and_Challenging_Weather_CVPR_2022_paper.pdf">Ithaca365 (Carlos A. Diaz-Ruiz et al., CVPR 2022)</a> and <a href="https://arxiv.org/pdf/2403.04133">nuPlan (Napat Karnchanachari et al., ICRA 2024)</a> datasets, featuring 40 locations, 
+  each with no less than 10 traversals, totaling 467 driving video clips and 35,304 images. Ithaca365 emphasizes 
+  its multitraverse nature in the original paper, whereas nuPlan does not explicitly mention this feature. 
+  These two datasets capture diverse scenes to verify our method across various driving scenarios. 
+  Both datasets use the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (CC BY-NC-SA 4.0).
+  </p>
+  
+  <h3 style="font-weight: bold;">Mapverse-Ithaca365</h3>
+  <figure style="width: 100%;">
+    <a href="https://ithaca365.mae.cornell.edu/">
+      <img width="100%" src="./3dgm_files/ithaca.png">
+    </a>
+    <p class="caption_method" style="margin-bottom: 1px;">
+    <b>Visualizations of sample data in Mapverse-Ithaca365.</b> Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity. Ithaca365 is repeatedly recorded along a 15 km route under diverse scenes, weather, time, 
+      and traffic conditions. The dataset includes images and point clouds from four cameras and LiDAR sensors, 
+      along with high-precision GPS/INS to establish correspondence across routes. A key uniqueness of this dataset is that the same locations can be observed across different weather and time conditions. Please check the <a href="https://ithaca365.mae.cornell.edu/">
+      official page of Ithaca365</a>  for more details.
+    </p>
+  </figure>
+
+  <h3 style="font-weight: bold;">Mapverse-nuPlan</h3>
+  <figure style="width: 100%;">
+    <a href="https://ithaca365.mae.cornell.edu/">
+      <img width="100%" src="./3dgm_files/nuplan.png">
+    </a>
+    <p class="caption_method" style="margin-bottom: 1px;">
+    <b>Visualizations of sample data in Mapverse-nuPlan.</b> Each row represents image observations of the same location captured during different traversals, with five traversals shown for brevity. 
+    The nuPlan dataset is a comprehensive dataset designed to advance research and development in autonomous vehicle planning. 
+    Developed by Motional, it is considered the world's first and largest benchmark for AV planning.
+     The dataset includes approximately 1,500 hours of driving data collected from four cities: Boston, Pittsburgh, Las Vegas, and Singapore. 
+     The authors provide 10% of the raw sensor data (120 hours). We find that the nuPlan dataset collected in Las Vegas has a number of repeated traversals 
+     of the same location. Hence, we extract the multitraverse driving data (from mid-May to late July 2021) by querying the GPS coordinates. Please check the <a href="https://nuplan.org/">
+      official page of nuPlan</a>  for more details.
+    </p>
+  </figure>
+</section>
+
+
+
+
+<section id="Segmentation">
+  <h2 style="color: #0095b6; font-weight: bold;">Emerged Segmentation</h2>
+
+  <hr>
+
+  <h3 style="color: #0095b6; font-weight: bold;">Location 600 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/mask-loc600.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #0095b6; font-weight: bold;">Location 2450 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/mask-loc2450.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  
+<h3 style="color: #0095b6; font-weight: bold;">Location 24 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/mask-loc24.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  <h3 style="color: #0095b6; font-weight: bold;">Location 28 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/mask-loc28.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #0095b6; font-weight: bold;">Location 30 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/mask-loc30.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+  <p class="caption" ,="" style="color: #0095b6;margin-top: 1cm; margin-bottom: 1cm">
+    Left: Original RGB; Right: 2D Ephemerality Segmentation
+  </p>
+
+</section>
+
+
+
+
+<section id="Depth">
+    <!-- <h2>Depth Map of 10 Traversals</h2> -->
+    <h2 style="color: #76b776; font-weight: bold;">Depth Map</h2>
+
+    <hr>
+
+  <h3 style="color: #76b776; font-weight: bold;">Location 600 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/loc600.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  <h3 style="color: #76b776; font-weight: bold;">Location 2450 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/loc2450.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #76b776; font-weight: bold;">Location 24 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/loc24.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  <h3 style="color: #76b776; font-weight: bold;">Location 28 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/loc28.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #76b776; font-weight: bold;">Location 30 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/loc30.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <p class="caption" ,="" style="color: #76b776;margin-top: 1cm; margin-bottom: 1cm">
+    Left: Original RGB; Right: Depth Map (Environment-Only)
+  </p>
+	
+</section>
+
+
+<section id="Rendering">
+  <h2 style="color: #B776B7; font-weight: bold;">Neural Environment Rendering</h2>
+  <hr>
+	
+
+  <h3 style="color: #B776B7; font-weight: bold;">Location 600 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/render-loc600.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  <h3 style="color: #B776B7; font-weight: bold;">Location 2450 of Mapverse-Ithaca365</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="ithaca/render-loc2450.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #B776B7; font-weight: bold;">Location 24 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/render-loc24.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+
+  <h3 style="color: #B776B7; font-weight: bold;">Location 28 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/render-loc28.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+
+  <h3 style="color: #B776B7; font-weight: bold;">Location 30 of Mapverse-nuPlan</h3>
+  <figure>
+    <video class="centered" width="100%" controls="" muted="" loop="" autoplay="">
+      <source src="nuplan/render-loc30.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+  <p class="caption" ,="" style="color: #B776B7;margin-top: 1cm; margin-bottom: 1cm">
+    Left: Original RGB; Right: Rendered RGB (Environment-Only)
+  </p>
+	
+</section>
+
+
+
+<section id="bibtex">
+  <h2 style="font-weight: bold;">Citation</h2>
+  <hr>
+  <pre><code>
+      @article{li3dgm2024,
+        title={Memorize What Matters: Emergent scene decomposition from multitraverse},
+        author={Li, Yiming and Wang, Zehong and Wang, Yue and Yu, Zhiding and Gojcic, Zan 
+          and Pavone, Marco and Feng, Chen and Alvarez, Jose M},
+        journal={arXiv preprint},
+        year={2024}
+      }
+  </code></pre>
+</section>
+
+<section id="paper">
+  <h2 style="font-weight: bold;">Paper</h2>
+  <hr>
+  <figure style="width: 100%;">
+    <a href="https://arxiv.org/pdf/2405.17187">
+      <img width="100%" src="./3dgm_files/output.png">
+    </a>
+  </figure>
+  <hr>
+</section>
+
+<section id="acknowledgment">
+  <h2 style="font-weight: bold;">Acknowledgment</h2>
+  <hr>
+  <p>We express our deep gratitude to <a href="https://jiawei-yang.github.io/">Jiawei Yang</a> 
+    and <a href="http://www.cs.utoronto.ca/~fidler/">Sanja Fidler</a> for their valuable feedback throughout the project. 
+    We also thank <a href="https://yurongyou.com/">Yurong You</a> and 
+    <a href="https://scholar.google.com/citations?user=ud0vmoMAAAAJ&hl=en&oi=sra">Carlos A. Diaz-Ruiz</a> for their support with the Ithaca365 dataset, 
+    and <a href="https://shijiezhou-ucla.github.io/">Shijie Zhou</a> for his help with high-dimensional feature rendering in 3DGS. 
+    Yiming Li gratefully acknowledges support from the NVIDIA Graduate Fellowship Program. 
+    This website design is borrowed from <a href="https://research.nvidia.com/labs/toronto-ai/xcube/">XCube</a>.  
+  </p>
+</section>
+
+<!-- <script type="module" src="js/show_3D.js"></script> -->
+
+<script src="./3dgm_files/video_comparison.js"></script>
+
+
+
+</div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
