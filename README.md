@@ -33,7 +33,7 @@
 
 
 # News
-- [2024/09]: Our paper is accepted as a NeurIPS 2024 Spotlight. We will release our data and code in one month!
+- [2024/09]: Our paper is accepted as a **NeurIPS 2024 Spotlight** ⚡.
 - [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). 
 </br>
 
