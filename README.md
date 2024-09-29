@@ -64,12 +64,10 @@ Mapverse features 40 locations, each with no less than 10 traversals, totaling 4
 If this work is helpful for your research, please cite the following BibTeX entry.
 
 ```
-@misc{li2024memorize,
+@inproceedings{li2024memorize,
       title={Memorize What Matters: Emergent Scene Decomposition from Multitraverse}, 
       author={Yiming Li and Zehong Wang and Yue Wang and Zhiding Yu and Zan Gojcic and Marco Pavone and Chen Feng and Jose M. Alvarez},
-      year={2024},
-      eprint={2405.17187},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+      year={2024}
 }
 ```
