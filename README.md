@@ -6,7 +6,7 @@
 
 
 
-> **Memorize What Matters: Emergent Scene Decomposition from Multitraverse**, Technical Report.
+> **Memorize What Matters: Emergent Scene Decomposition from Multitraverse**, NeurIPS 2024 (Spotlight).
 
 > [Yiming Li](https://scholar.google.com/citations?hl=en&user=i_aajNoAAAAJ&view_op=list_works&sortby=pubdate), [Zehong Wang](), [Yue Wang](https://scholar.google.com/citations?user=v-AEFIEAAAAJ&hl=en), [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Zan Gojcic](https://scholar.google.com/citations?user=8KsqL4gAAAAJ&hl=en), [Marco Pavone](https://scholar.google.com/citations?user=RhOpyXcAAAAJ&hl=en), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en), [Jose M. Alvarez](https://scholar.google.com/citations?user=Oyx-_UIAAAAJ&hl=en)
 
@@ -33,7 +33,8 @@
 
 
 # News
-- [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). We will release our data and code soon!
+- [2024/09]: Our paper is accepted as a NeurIPS 2024 Spotlight. We will release our data and code in one month!
+- [2024/05]: Our paper is on [arxiv](https://arxiv.org/abs/2405.17187). 
 </br>
 
 
